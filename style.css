@@ -1,0 +1,191 @@
+/* universal styles ===================================*/
+body {
+    background-color: #004225;
+}
+h1 {
+    font-size: 1.2em;
+}
+h2 {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 1em;
+    color: white;
+}
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+/* header styles ======================================*/
+header {
+    font-family: 'Petit Formal Script', cursive;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* [HAMBURGER MENU] */
+ /* (A) BREAK INTO VERTICAL MENU */
+ #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+    font-family: 'Oswald', sans-serif;
+  }
+ 
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label { 
+    display: inline-block; 
+    color: black;
+    background: white;
+    font-style: normal;
+    font-size: 1em;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  input[type="checkbox"]{
+    display:none;
+  }
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #hamitems { 
+      display: none; 
+    }
+  #hamnav input:checked ~ #hamitems { 
+      display: block; 
+    }
+    .header-photo {
+        background-image: url('./resources/main_background_cropped.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .header-text {
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 20px 40px;
+    }
+    .header-text p {
+        font-family: 'Oswald', sans-serif;
+        color: black;
+        text-transform: uppercase;
+    }
+
+/* media queries header ===============================*/
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    header {
+        margin-bottom: 20px;
+    }
+    #hamnav label {
+        margin-bottom: 20px;
+    }
+    .header-text {
+        font-size: 2em;
+    }
+}
+@media only screen and (min-width: 1050px) {
+    h1 {
+        font-size: 3em;
+    }
+    /* [ON BIG SCREEN] */
+    /* (A) WRAPPER */
+    #hamnav {
+        width: 100%;
+        background: #004225;
+    }
+    
+    /* (B) HORIZONTAL MENU ITEMS */
+    #hamitems { 
+        display: flex; 
+    }
+    #hamitems a {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 10px;
+        text-align: center;
+    }
+    #hamitems a:hover { 
+        background: #558257; 
+    }
+    
+    /* (C) HIDE HAMBURGER */
+    #hamnav label, #hamburger { 
+        display: none; 
+    }
+    .header-text {
+        font-size: 2.5em;
+        padding: 250px 120px 20px;
+        letter-spacing: 0.1em; 
+    }
+}
+
+
+/* intro section styles ======================================*/
+.intro-section {
+    text-align: center;
+    box-shadow: 5px 5px 10px rgb(26, 25, 25) inset;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.intro-section button {
+    background-color: #FADCD9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(26, 25,25);
+    border: none;
+    margin: 10px 0;
+}
+.inspiration {
+    background-image: url('./resources/inspiration_background_dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.kivik {
+    background-color: #42001D;
+}
+
+/* media queries intro section =============================*/
+@media only screen and (min-width: 768px) {
+    .intro-section {
+        padding-left: 80px;
+        padding-right: 80px;
+        margin: 20px;
+    }
+    .intro-section h2 {
+        font-size: 1.8em;
+    }
+    .intro-section p {
+        font-size: 1.2em;
+    }
+    .intro-section button {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .inspiration {
+        background-image: url('./resources/inspiration_background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+
+/* footer styles ===========================================*/
+#photo {
+    font-size: 0.6em;
+    color: white;
+    border-top: 1px solid lightgray;
+}
+#photo a {
+    text-decoration: underline;
+}
