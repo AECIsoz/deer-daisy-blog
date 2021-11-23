@@ -178,8 +178,6 @@ header {
         background-attachment: fixed;
     }
 }
-
-
 /* footer styles ===========================================*/
 #photo {
     font-size: 0.6em;
@@ -188,4 +186,18 @@ header {
 }
 #photo a {
     text-decoration: underline;
+}
+
+/*blog post page =============================================*/ 
+.grid-container {
+    display: grid;
+    grid-template: repeat(24, 1fr) / repeat(24, 1fr);
+    width: 100%;
+    height: 200px;
+}
+article {
+    display: grid;
+}
+.blog-post img {
+    grid-area: 1 / 18 / 6 / 24;
 }
