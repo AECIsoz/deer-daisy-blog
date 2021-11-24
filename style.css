@@ -258,3 +258,11 @@ header {
         padding: 0 50px;
     }
 }
+
+/* kivik page styles ==============================*/
+.kivik-container {
+    background-color: #FADCD9;
+}
+.kivik-container img {
+    width: 200px;
+}
