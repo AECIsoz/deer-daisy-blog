@@ -112,6 +112,7 @@ header {
         flex-basis: 0;
         padding: 10px;
         text-align: center;
+        font-size: 1.6em;
     }
     #hamitems a:hover { 
         background: #558257; 
@@ -189,15 +190,48 @@ header {
 }
 
 /*blog post page =============================================*/ 
-.grid-container {
-    display: grid;
-    grid-template: repeat(24, 1fr) / repeat(24, 1fr);
+.flex-container-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    background-color:#FADCD9;
+    ;
+}
+.blog-post-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.blog-post-small h2 {
+    color: black;
+    font-size: 1.4em;
+}
+.blog-post-small p {
+    color: black;
+    text-align: left;
+}
+.blog-post-small img {
     height: 200px;
+    width: 200px;
+    box-shadow: 5px 5px 5px #3d3c3c;
 }
-article {
-    display: grid;
+.first-paragraph {
+    border-top: 1px solid darkslategray;
+    padding-top: 10px;
 }
-.blog-post img {
-    grid-area: 1 / 18 / 6 / 24;
+/* media queries blog page ======================================*/
+@media only screen and (min-width: 768px) {
+    .blog-post-small h2 {
+        font-size: 1.8em;
+    }
+    .blog-post-small img {
+        height: 300px;
+        width: 300px;
+    }
+    .blog-post-small p {
+        font-size: 1.2em;
+    }
 }
